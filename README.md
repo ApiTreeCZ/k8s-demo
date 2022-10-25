@@ -5,6 +5,11 @@ Login:
 gcloud auth login
 ```
 
+Setup cluster
+```shell
+gcloud container clusters get-credentials CLUSTER_NAME
+```
+
 Deploy (deployment):
 ```shell
 kubectl apply -f src/deployment.yaml
@@ -13,6 +18,16 @@ kubectl apply -f src/deployment.yaml
 Deploy (service)
 ```shell
 kubectl apply -f src/service.yaml
+```
+
+List of contexts
+````shell
+kubectl config get-contexts 
+````
+
+Remove context from config (not from server)
+```shell
+kubectl config delete-context CONTEXT_NAME 
 ```
 
 Links:
